@@ -10,13 +10,8 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  console.log('User connected', socket.id);
-  socket.on('hello', (msg) => {
-    console.log(msg);
-    io.emit(
-      'hello',
-      `send back u a random number ${Math.floor(Math.random() * 100)}`
-    );
+  socket.on('chat message', (msg) => {
+    io.emit('chat message', msg);
   });
 });
 
