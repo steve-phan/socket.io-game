@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding-bottom: 3rem;
@@ -82,4 +87,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#notice {
+  position: fixed;
+  text-align: right;
+  padding-right: 20px;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+  color: #efdcdc;
+  font-size: 14px;
+  font-style: italic;
 }

@@ -10,8 +10,12 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  socket.on('chat message', (msg) => {
-    io.emit('chat message', msg);
+  socket.on('chat message', (payload) => {
+    console.log(payload);
+    io.emit('chat message', payload);
+  });
+  socket.on('user typing', (payload) => {
+    io.emit('user typing', payload);
   });
 });
 
