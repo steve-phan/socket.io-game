@@ -31,6 +31,7 @@ socket.on('user typing', (payload) => {
     if (temId) {
       clearTimeout(temId);
     }
+    // after 0.3s if user do not type anything just remove notice
     temId = setTimeout(() => {
       userNotice.textContent = '';
       temId = null;
